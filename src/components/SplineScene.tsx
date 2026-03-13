@@ -6,9 +6,11 @@ export default function SplineScene() {
   const [hasError, setHasError] = useState(false)
 
   const handleLoad = () => {
-    console.log("Spline scene loaded successfully")
     setIsLoading(false)
     setHasError(false)
+    setTimeout(() => {
+      document.querySelectorAll('a[href*="spline.design"], a[href="https://spline.design"]').forEach(el => (el as HTMLElement).style.display = "none")
+    }, 500)
   }
 
   const handleError = (error: unknown) => {
