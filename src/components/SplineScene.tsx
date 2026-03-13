@@ -20,7 +20,7 @@ export default function SplineScene() {
   }
 
   return (
-    <div className="absolute inset-0 w-full h-full bg-background">
+    <div className="absolute inset-0 w-full h-full bg-background overflow-hidden">
       {isLoading && (
         <div className="absolute inset-0 w-full h-full flex items-center justify-center">
           <div className="text-foreground text-center">
@@ -53,6 +53,7 @@ export default function SplineScene() {
           />
         </Suspense>
       )}
+      <div className="absolute bottom-0 right-0 w-48 h-12 bg-background z-50" />
     </div>
   )
 }
